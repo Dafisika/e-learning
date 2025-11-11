@@ -6,6 +6,6 @@ import Register from "./pages/Register";
 
 createRoot(document.getElementById("root")).render(
     <StrictMode>
-        <Register />
+        <Login />
     </StrictMode>
 );
