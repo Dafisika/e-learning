@@ -198,8 +198,8 @@ function DetailProduct() {
                         </div>
                     </Banner>
                 </div>
-                <article className="grid grid-cols-3  gap-9">
-                    <section className="flex flex-col col-span-2  gap-6">
+                <article className="grid grid-cols-3 gap-9">
+                    <section className="flex flex-col col-span-2 gap-6">
                         <div className="bg-white flex flex-col border border-[#3A35411F] rounded-[10px] p-6 gap-6">
                             <p className="font-semibold text-xl leading-[120%] text-[#222325]">
                                 Deskripsi
@@ -922,7 +922,7 @@ function DetailProduct() {
                         </div>
                     </section>
 
-                    <aside className="bg-white flex flex-col col-span-1 border border-[#3A35411F] rounded-[10px] p-6 gap-6">
+                    <aside className="h-full flex flex-col col-span-1 border border-[#3A35411F] rounded-[10px] p-6 gap-6">
                         <div className="flex flex-col gap-4">
                             <p className="font-semibold text-lg leading-[120%] text-[#222325]">
                                 Gapai Karier Impianmu sebagai Seorang UI/UX
