@@ -1,7 +1,7 @@
 import Logo from "/logo/videobelajar.png";
-import Button from "../components/button/Button";
-import Card from "../components/card/Card";
-import Navbar from "../components/navbar/Navbar";
+import Button from "../../components/button/Button";
+import Card from "../../components/card/Card";
+import Navbar from "../../components/navbar/Navbar";
 import BankBca from "/bank/bca.png";
 import BankBni from "/bank/bni.png";
 import BankBri from "/bank/bri.png";
@@ -13,7 +13,7 @@ import Shopee from "/bank/shopee.png";
 import MasterCard from "/bank/mastercard.png";
 import Visa from "/bank/visa.png";
 import Jcb from "/bank/jcb.png";
-import Product from "../components/Product";
+import Product from "../../components/Product";
 import Card1 from "/cover/card-1.png";
 
 function PaymentMethod() {
@@ -205,7 +205,7 @@ function PaymentMethod() {
                             </div>
                         </div>
                         <section className="bg-white flex flex-col border border-[#3A35411F] rounded-[10px] p-6 gap-6">
-                            <p className="font-poppins font-semibold text-xl leading-[120%] text-[#222325]">
+                            <p className="font-poppins font-semibold text-xl leading-[120%] text-text-dark-primary">
                                 Ringkasan Pesanan
                             </p>
                             <div className="flex justify-between items-baseline">
@@ -228,7 +228,7 @@ function PaymentMethod() {
                             </div>
                             <hr className="text-[#3A35411F]" />
                             <div className="flex justify-between items-center">
-                                <p className="font-bold text-lg leading-[140%] tracking-[0.2%] text-[#222325]">
+                                <p className="font-bold text-lg leading-[140%] tracking-[0.2%] text-text-dark-primary">
                                     Total Pembayaran
                                 </p>
                                 <p className="font-semibold text-xl leading-[120%] text-[#3ECF4C] ">

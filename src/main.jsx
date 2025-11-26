@@ -6,12 +6,14 @@ import Register from "./pages/Register";
 import Home from "./pages/Home";
 import All from "./pages/product/All";
 import DetailProduct from "./pages/product/DetailProduct";
-import PaymentWay from "./pages/PaymentMethod";
-import Payment from "./pages/Payment";
-import PaymentMethod from "./pages/PaymentMethod";
+import Payment from "./pages/payment/Payment";
+import PaymentMethod from "./pages/payment/PaymentMethod";
+import ChangePaymentMethod from "./pages/payment/ChangePaymentMethod";
+import PaymentDone from "./pages/payment/PaymentDone";
+import Order from "./pages/order/Order";
 
 createRoot(document.getElementById("root")).render(
     <StrictMode>
-        <PaymentMethod />
+        <Order />
     </StrictMode>
 );

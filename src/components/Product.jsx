@@ -3,10 +3,10 @@ import Button from "./button/Button";
 function Product(props) {
     const { image, isDetailProduct } = props;
     return (
-        <aside className="flex flex-col col-span-1 border border-[#3A35411F] rounded-[10px] p-6 gap-6">
+        <aside className="bg-white flex flex-col col-span-1 border border-[#3A35411F] rounded-[10px] p-6 gap-6">
             {image && <img src={image} />}
             <div className="flex flex-col gap-4">
-                <p className="font-semibold text-lg leading-[120%] text-[#222325]">
+                <p className="font-semibold text-lg leading-[120%] text-text-dark-primary">
                     Gapai Karier Impianmu sebagai Seorang UI/UX Designer &
                     Product Manager.
                 </p>

@@ -202,7 +202,7 @@ function DetailProduct() {
                 <article className="grid grid-cols-3 gap-9">
                     <section className="flex flex-col col-span-2 gap-6">
                         <div className="bg-white flex flex-col border border-[#3A35411F] rounded-[10px] p-6 gap-6">
-                            <p className="font-semibold text-xl leading-[120%] text-[#222325]">
+                            <p className="font-semibold text-xl leading-[120%] text-text-dark-primary">
                                 Deskripsi
                             </p>
                             <p className="font-normal text-base leading-[140%] tracking-[0.2%] text-[#333333AD]">
