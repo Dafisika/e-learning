@@ -122,13 +122,23 @@ function ClassDetail(props) {
                             {progress}%
                         </span>
                     </p>
-                    <progress
-                        max="100"
-                        value="100"
-                        className="bg-[#F64920] h-1 w-full"
-                    >
-                        {" "}
-                    </progress>
+                    {progress === 100 ? (
+                        <progress
+                            max="100"
+                            value="100"
+                            className="bg-[#F64920] h-1 w-full"
+                        >
+                            {" "}
+                        </progress>
+                    ) : (
+                        <progress
+                            max="100"
+                            value="28"
+                            className="bg-[#F64920] h-1 w-full"
+                        >
+                            {" "}
+                        </progress>
+                    )}
                 </div>
                 <div className="flex text-nowrap gap-4">
                     {progress === 100 ? (

@@ -13,9 +13,10 @@ import DoneOrPending from "./pages/payment/DoneOrPending";
 import OrderDetailProduct from "./pages/order/MyOrderDetailProduct";
 import MyOrderDetailProduct from "./pages/order/MyOrderDetailProduct";
 import MyClassDetail from "./pages/order/MyClassDetail";
+import MyProfile from "./pages/order/MyProfile";
 
 createRoot(document.getElementById("root")).render(
     <StrictMode>
-        <MyClassDetail />
+        <MyProfile />
     </StrictMode>
 );
