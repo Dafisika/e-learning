@@ -1,0 +1,32 @@
+[
+    {
+        "title": "Introduction to HR",
+        "category": "Pre-Test",
+        "description": "10 Pertanyaan",
+        "isDone": false
+    },
+    {
+        "title": "Introduction to HR",
+        "category": "Video",
+        "description": "12 Menit",
+        "isDone": true
+    },
+    {
+        "title": "Introduction to HR",
+        "category": "Video",
+        "description": "12 Menit",
+        "isDone": false
+    },
+    {
+        "title": "Introduction to HR",
+        "category": "Rangkuman",
+        "description": "12 Menit",
+        "isDone": false
+    },
+    {
+        "title": "Introduction to HR",
+        "category": "Quiz",
+        "description": "10 Pertanyaan",
+        "isDone": false
+    }
+]
