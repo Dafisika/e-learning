@@ -7,7 +7,7 @@ import IconTwitter from "/icon/twitter.png";
 import Card1 from "/cover/card-1.png";
 import Avatar1 from "/avatar/Avatar-1.png";
 import Article from "../../data/Article.json";
-import Footer from "../../components/Footer";
+import Footer from "../../components/footer/Footer";
 import Card from "../../components/card/Card";
 import Navbar from "../../components/navbar/Navbar";
 import Banner from "../../components/Banner";

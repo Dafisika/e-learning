@@ -15,9 +15,10 @@ import MyOrderDetailProduct from "./pages/order/MyOrderDetailProduct";
 import MyClassDetail from "./pages/order/MyClassDetail";
 import MyProfile from "./pages/order/MyProfile";
 import Video from "./pages/collection/Video";
+import Rules from "./pages/collection/Rules";
 
 createRoot(document.getElementById("root")).render(
     <StrictMode>
-        <Video />
+        <Rules />
     </StrictMode>
 );

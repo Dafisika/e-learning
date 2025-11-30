@@ -3,7 +3,7 @@ import OrderDetail from "../../components/order/OrderDetail";
 import Card1 from "/cover/card-1.png";
 import Detail from "../../data/Detail.json";
 import Pagination from "../../components/Pagination";
-import Footer from "../../components/Footer";
+import Footer from "../../components/footer/Footer";
 
 function MyOrderDetailProduct() {
     return (
