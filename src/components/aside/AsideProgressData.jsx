@@ -2,7 +2,7 @@ function AsideProgressData(props) {
     const { category, description, isDone } = props;
     return (
         <div className="flex flex-col gap-3">
-            <div className="flex flex-col bg-white hover:bg-[#E2FCD966] hover:border hover:border-[#3ECF4C]  rounded-[10px] pointer gap-1 p-4">
+            <div className="flex flex-col bg-white hover:bg-[#E2FCD966] active:border active:border-[#3ECF4C]  rounded-[10px] pointer gap-1 p-4">
                 <div className="flex gap-1.5">
                     {isDone ? (
                         <svg

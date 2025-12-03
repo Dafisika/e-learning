@@ -17,9 +17,11 @@ import MyProfile from "./pages/order/MyProfile";
 import Video from "./pages/collection/Video";
 import Rules from "./pages/collection/Rules";
 import Question from "./pages/collection/Question";
+import PopUpIsDone from "./pages/collection/PopUpIsDone";
+import Congrats from "./pages/collection/Congrats";
 
 createRoot(document.getElementById("root")).render(
     <StrictMode>
-        <Question />
+        <Congrats />
     </StrictMode>
 );

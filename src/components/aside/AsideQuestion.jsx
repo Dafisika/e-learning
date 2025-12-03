@@ -1,23 +1,79 @@
-import Questions from "../../data/Question.json";
-
 function AsideQuestion(props) {
-    const { answer } = props;
-    return (
-        <div className="flex items-center group active:border active:border-[#3ECF4C] rounded-sm p-[18px] gap-3 ">
-            <input
-                type="radio"
-                name="answer"
-                id={answer.id}
-                className="bg-[#E2FCD9CC] w-[18px] h-[18px] appearance-none border-[1.5px] border-[#3ECF4C] rounded-full required checked:bg-[#3ECF4C]"
-            />
+    const { number } = props;
 
-            <label
-                htmlFor={answer.id}
-                className="font-normal text-base group-hover:text-[#3ECF4C]  leading-[140%] tracking-[0.2px]"
-            >
-                {answer.answer}
-            </label>
-        </div>
+    return (
+        <aside className="flex flex-col col-span-1 border border-[#3A35411F] px-9 pt-[18px] pb-6 gap-[18px]">
+            <p className="font-poppins! font-semibold text-lg leading-[120%] text-text-dark-primary">
+                List Soal
+            </p>
+            <div className="flex justify-between ">
+                <div
+                    className={`${
+                        number === number
+                            ? "bg-[#FEE8D2CC] border border-[#F64920]"
+                            : number !== number
+                            ? "bg-white border border-[#3A35411F]"
+                            : null
+                    } w-[46px] h-[46px] flex items-center justify-center  rounded-sm`}
+                >
+                    <button className=" font-bold text-base text-text-dark-primary leading-[140%] tracking-[0.2px] ">
+                        1
+                    </button>
+                </div>
+                <div className="bg-white w-[46px] h-[46px] flex items-center justify-center border border-[#3A35411F] rounded-sm">
+                    <button className=" font-bold text-base text-text-dark-primary leading-[140%] tracking-[0.2px] ">
+                        2
+                    </button>
+                </div>
+                <div className="bg-white w-[46px] h-[46px] flex items-center justify-center border border-[#3A35411F] rounded-sm">
+                    <button className=" font-bold text-base text-text-dark-primary leading-[140%] tracking-[0.2px] ">
+                        3
+                    </button>
+                </div>
+                <div className="bg-white w-[46px] h-[46px] flex items-center justify-center border border-[#3A35411F] rounded-sm">
+                    <button className=" font-bold text-base text-text-dark-primary leading-[140%] tracking-[0.2px] ">
+                        4
+                    </button>
+                </div>
+                <div className="bg-white w-[46px] h-[46px] flex items-center justify-center border border-[#3A35411F] rounded-sm">
+                    <button className=" font-bold text-base text-text-dark-primary leading-[140%] tracking-[0.2px] ">
+                        5
+                    </button>
+                </div>
+            </div>
+            <div className="flex justify-between ">
+                <div className="bg-white w-[46px] h-[46px] flex items-center justify-center border border-[#3A35411F] rounded-sm">
+                    <button className=" font-bold text-base text-text-dark-primary leading-[140%] tracking-[0.2px] ">
+                        6
+                    </button>
+                </div>
+                <div className="bg-white w-[46px] h-[46px] flex items-center justify-center border border-[#3A35411F] rounded-sm">
+                    <button className=" font-bold text-base text-text-dark-primary leading-[140%] tracking-[0.2px] ">
+                        7
+                    </button>
+                </div>
+                <div className="bg-white w-[46px] h-[46px] flex items-center justify-center border border-[#3A35411F] rounded-sm">
+                    <button className=" font-bold text-base text-text-dark-primary leading-[140%] tracking-[0.2px] ">
+                        8
+                    </button>
+                </div>
+                <div className="bg-white w-[46px] h-[46px] flex items-center justify-center border border-[#3A35411F] rounded-sm">
+                    <button className=" font-bold text-base text-text-dark-primary leading-[140%] tracking-[0.2px] ">
+                        9
+                    </button>
+                </div>
+                <div className="bg-white w-[46px] h-[46px] flex items-center justify-center border border-[#3A35411F] rounded-sm">
+                    <button className=" font-bold text-base text-text-dark-primary leading-[140%] tracking-[0.2px] ">
+                        10
+                    </button>
+                </div>
+            </div>
+            <div className="py-4 px-4 bg-[#EBF9FE] border border-[#0980E2] rounded-[5px]">
+                <p className="font-poppins! font-normal text-sm text-[#0980E2] leading-5">
+                    Selesaikan semua soal untuk mengakhiri quiz
+                </p>
+            </div>
+        </aside>
     );
 }
 export default AsideQuestion;
