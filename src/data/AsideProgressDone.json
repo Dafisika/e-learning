@@ -1,0 +1,25 @@
+{
+    "title": "Tanggal Pretest:",
+    "date": "23 September 2022, 10:20 AM",
+    "data": [
+        {
+            "type": "Nilai",
+            "score": "100"
+        },
+        {
+            "type": "Soal",
+            "score": "10"
+        },
+        {
+            "type": "Benar",
+            "score": "10"
+        },
+        {
+            "type": "Salah",
+            "score": "0"
+        }
+    ],
+
+    "status": "Selesai!",
+    "description": "Pretest sudah selesai dan kami sudah mengetahui progresmu. Saatnya memulai kelas!"
+}

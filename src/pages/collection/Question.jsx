@@ -5,15 +5,17 @@ import ButtonProgress from "../../components/button/ButtonProgress";
 import FooterProgress from "../../components/footer/FooterProgress";
 import NavbarProgress from "../../components/navbar/NavbarProgress";
 import Questions from "../../data/Question.json";
+import ModalImage from "/etc/modal_image.png";
+import Modal from "../../components/modal/Modal";
 
 function Question() {
-    const question = Questions[6];
+    const question = Questions[2];
 
     return (
         <>
             <NavbarProgress />
             <main className="grid grid-cols-4">
-                <AsideQuestion />
+                <AsideQuestion number={question.number} />
                 <section className="flex flex-col justify-between col-span-2 py-9 px-16">
                     <section className="flex flex-col gap-6">
                         <div className="flex flex-col gap-5">
@@ -36,6 +38,7 @@ function Question() {
                 <AsideProgress />
             </main>
             <FooterProgress />
+            {/* <Modal ModalImage={ModalImage} /> */}
         </>
     );
 }
