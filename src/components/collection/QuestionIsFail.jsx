@@ -1,6 +1,6 @@
-import AsideProgressDone from "../../data/AsideProgressDone.json";
+import AsideProgressFail from "../../data/AsideProgressFail.json";
 
-function QuestionIsDone(props) {
+function QuestionIsFail(props) {
     const { title, date, data, status, description } = props;
     return (
         <section className="flex flex-col py-9 px-28 gap-6">
@@ -18,7 +18,7 @@ function QuestionIsDone(props) {
                         key={index}
                         className={`${
                             item.type === "Nilai"
-                                ? "bg-[#38D189] text-white"
+                                ? "bg-[#FF5C2B] text-white"
                                 : "bg-white text-[#333333AD] border-e border-[#3A35411F]"
                         } flex flex-col  py-[18px] px-3 gap-2.5`}
                     >
@@ -66,10 +66,23 @@ function QuestionIsDone(props) {
             <p className="font-normal text-base text-[#333333AD] leading-[140%] tracking-[0.2px]">
                 {description}
             </p>
-            {/* <p className="font-normal text-lg text-[#333333AD] leading-[140%] tracking-[0.2px]">
-                {description}
-            </p> */}
+
+            <button className="w-fit flex items-center gap-2 border border-[#3ECF4C] rounded-[10px] py-2.5 px-[26px] font-bold text-base text-[#3ECF4C] leading-[140%] tracking-[0.2px]">
+                <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        d="M17.65 6.35C16.2 4.9 14.21 4 12 4C7.58001 4 4.01001 7.58 4.01001 12C4.01001 16.42 7.58001 20 12 20C15.73 20 18.84 17.45 19.73 14H17.65C16.83 16.33 14.61 18 12 18C8.69001 18 6.00001 15.31 6.00001 12C6.00001 8.69 8.69001 6 12 6C13.66 6 15.14 6.69 16.22 7.78L13 11H20V4L17.65 6.35Z"
+                        fill="#3ECF4C"
+                    />
+                </svg>
+                Ulangi Quiz
+            </button>
         </section>
     );
 }
-export default QuestionIsDone;
+export default QuestionIsFail;

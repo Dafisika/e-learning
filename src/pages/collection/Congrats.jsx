@@ -4,11 +4,12 @@ import NavbarProgress from "../../components/navbar/NavbarProgress";
 import congratulation from "/etc/congratulation.png";
 import AsideProgressDone from "../../data/AsideProgressDone.json";
 import QuestionIsDone from "../../components/collection/QuestionIsDone";
+import ModalReview from "../../components/modal/ModalReview";
 
 function Congrats() {
     return (
         <>
-            <NavbarProgress />
+            <NavbarProgress progressDropDown />
             <main className="grid grid-cols-3">
                 <section className="flex flex-col col-span-2">
                     <img src={congratulation} alt="" />
@@ -25,6 +26,7 @@ function Congrats() {
                 <AsideProgress />
             </main>
             <FooterProgress />
+            {/* <ModalReview /> */}
         </>
     );
 }

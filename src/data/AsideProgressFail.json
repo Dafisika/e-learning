@@ -1,0 +1,25 @@
+{
+    "title": "Tanggal Quiz:",
+    "date": "23 September 2022, 10:20 AM",
+    "data": [
+        {
+            "type": "Nilai",
+            "score": "20"
+        },
+        {
+            "type": "Soal",
+            "score": "10"
+        },
+        {
+            "type": "Benar",
+            "score": "2"
+        },
+        {
+            "type": "Salah",
+            "score": "8"
+        }
+    ],
+
+    "status": "Sedikit Lagi!",
+    "description": "Kamu sudah menyelesaikan quiz dengan baik namun nilaimu belum cukup untuk melanjutkan materi. Pelajari kembali modul sebelumnya dan kerjakan kembali quiz ini!"
+}

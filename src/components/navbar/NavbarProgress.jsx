@@ -2,7 +2,7 @@ import Logo from "/logo/videobelajar.png";
 import Avatar from "/avatar/Avatar.png";
 
 function NavbarProgress(props) {
-    const { progressDropDown } = props;
+    const { Completed } = props;
     return (
         <nav className="relative flex justify-between items-center py-[18px] px-30 border-b border-[#3A35411F] gap-9">
             <div className="flex items-center gap-3">
@@ -24,7 +24,7 @@ function NavbarProgress(props) {
                 </p>
             </div>
 
-            {progressDropDown ? (
+            {Completed ? (
                 <div className="flex items-center gap-4">
                     <progress
                         max="12"
