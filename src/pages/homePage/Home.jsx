@@ -18,14 +18,14 @@ function Home() {
         <>
             <Navbar account={true} />
 
-            <main className="bg-[#FFFDF3] flex flex-col justify-center py-16 px-30 gap-16 ">
+            <main className="bg-[#FFFDF3] flex flex-col justify-center py-16 px-5 xl:px-30 gap-6 xl:gap-16 w-dvw ">
                 <div className="relative ">
                     <Banner>
-                        <h1 className="font-poppins! font-bold text-5xl line leading-[110.00000000000001%] text-center text-white">
+                        <h1 className="font-poppins! font-bold text-2xl xl:text-5xl line leading-[110.00000000000001%] text-center text-white">
                             Revolusi Pembelajaran: Temukan Ilmu Baru melalui
                             Platform Video Interaktif!
                         </h1>
-                        <p className="font-medium text-base leading-[140%] text-center text-white">
+                        <p className="font-medium text-sm xl:text-base leading-[140%] text-center text-white">
                             Temukan ilmu baru yang menarik dan mendalam melalui
                             koleksi video pembelajaran berkualitas tinggi. Tidak
                             hanya itu, Anda juga dapat berpartisipasi dalam
@@ -38,16 +38,16 @@ function Home() {
                         />
                     </Banner>
                 </div>
-                <article className="flex flex-col gap-8">
+                <article className="flex flex-col gap-6 xl:gap-8">
                     <section className="flex flex-col w-full h-full gap-2.5 ">
-                        <h2 className="font-poppins font-semibold text-[32px] leading-[110%] text-text-dark-primary">
+                        <h2 className="font-poppins font-semibold text-2xl xl:text-[32px] leading-[110%] text-text-dark-primary">
                             Koleksi Video Pembelajaran Unggulan
                         </h2>
-                        <p className="font-medium text-base  text-[#333333ad] tracking-[0.2%]">
+                        <p className="font-medium text-sm xl:text-base  text-[#333333ad] tracking-[0.2%]">
                             Jelajahi Dunia Pengetahuan Melalui Pilihan Kami!
                         </p>
                     </section>
-                    <section className=" flex py-3 pe-9 gap-6 font-normal text-base leading-[140%] tracking-[0.2%] text-[#333333ad] ">
+                    <section className="w-auto overflow-x-auto text-nowrap flex py-3 pe-9 gap-6 font-normal  text-base leading-[140%] tracking-[0.2%] text-[#333333ad] ">
                         <div className="flex flex-col gap-1.5">
                             Semua Kelas
                             <hr className="w-[52px] h-1.5 border-none outline-none rounded-[10px] bg-[#f64920]" />
@@ -57,7 +57,7 @@ function Home() {
                         <div className="feature">Pengembangan Diri</div>
                         <div className="feature">Bisnis</div>
                     </section>
-                    <section className="grid grid-cols-3 gap-6">
+                    <section className="grid grid-cols-1 xl:grid-cols-3 gap-6">
                         {Article.map((item, index) => (
                             <Card
                                 key={index}
@@ -76,44 +76,41 @@ function Home() {
                     </section>
                 </article>
 
-                <div className="low-banner-img">
-                    <div className="relative ">
-                        <Banner>
-                            <div className="flex flex-col items-center justify-center w-[525px] h-[118px] gap-10">
-                                <div className="flex flex-col items-center justify-center w-[525px] h-[118px] gap-1 text-white">
-                                    <p className="font-medium text-lg leading-[140%] tracking-[0.2%] text-[#C1C2C4]">
-                                        NEWSLETTER
+                <div className="relative">
+                    <Banner>
+                        <div className="flex flex-col items-center justify-center w-full h-[118px] gap-10">
+                            <div className="flex flex-col items-center justify-center w-full h-[118px] gap-1 text-white">
+                                <p className="font-medium text-base xl:text-lg leading-[140%] tracking-[0.2%] text-[#C1C2C4]">
+                                    NEWSLETTER
+                                </p>
+                                <div className="flex flex-col gap-2.5">
+                                    <p className="font-poppins! font-semibold text-2xl xl:text-[32px] leading-[110.00000000000001%] text-center text-white">
+                                        Mau Belajar Lebih Banyak?
                                     </p>
-                                    <div className="flex flex-col gap-2.5">
-                                        <p className="font-poppins! font-semibold text-[32px] leading-[110.00000000000001%] text-center text-white">
-                                            Mau Belajar Lebih Banyak?
-                                        </p>
-                                        <p className="font-medium text-base tracking-[0.2%] text-[#F4F5FA] text-center">
-                                            Daftarkan dirimu untuk mendapatkan
-                                            informasi terbaru dan penawaran
-                                            spesial dari program-program terbaik
-                                            hariesok.id
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className="flex w-full h-[58px] relative bg-white border-none rounded-[10px] py-2 pe-2 ps-8 gap-5 items-center">
-                                    <input
-                                        className="w-[525px] py-2 pe-2  gap-5"
-                                        id="email"
-                                        type="email"
-                                        placeholder="Masukkan Emailmu"
-                                    />
-                                    <button
-                                        className=" absolute right-2 bg-[#FFBD3A] border-none rounded-[10px]  py-2.5 px-[26px] text-white"
-                                        id="subscribe"
-                                        type="button"
-                                    >
-                                        Subscribe
-                                    </button>
+                                    <p className="font-medium text-sm xl:text-base tracking-[0.2%] text-[#F4F5FA] text-center">
+                                        Daftarkan dirimu untuk mendapatkan
+                                        informasi terbaru dan penawaran spesial
+                                        dari program-program terbaik hariesok.id
+                                    </p>
                                 </div>
                             </div>
-                        </Banner>
-                    </div>
+                            <div className="flex flex-col xl:flex-row w-full xl:relative border-none rounded-[10px]  xl:py-2.5  xl:pe-2 xl:ps-8 gap-4 items-center">
+                                <input
+                                    className="py-2.5 ps-3 xl:ps-8 xl:py-[18px] max-md:text-center px-2 rounded-[10px] text-sm bg-white w-full"
+                                    id="email"
+                                    type="email"
+                                    placeholder="Masukkan Emailmu"
+                                />
+                                <button
+                                    className=" xl:absolute xl:right-4 xl:w-fit bg-[#FFBD3A] border-none rounded-[10px] xl:px-[26px] text-white max-md:text-center py-2.5 px-2  text-sm w-full"
+                                    id="subscribe"
+                                    type="button"
+                                >
+                                    Subscribe
+                                </button>
+                            </div>
+                        </div>
+                    </Banner>
                 </div>
             </main>
             <Footer />

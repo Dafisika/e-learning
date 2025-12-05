@@ -3,7 +3,7 @@ function AccordionItem(props) {
     return (
         <>
             <div className="flex justify-between">
-                <p className="font-poppins font-semibold text-lg leading-[120%] text-[#222325]">
+                <p className="font-poppins font-semibold text-lg leading-[120%] text-text-dark-primary">
                     {title}
                 </p>
                 <div className="">

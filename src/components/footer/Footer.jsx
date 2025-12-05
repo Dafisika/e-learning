@@ -1,6 +1,6 @@
 function Footer() {
     return (
-        <footer className="flex flex-col w-full  bg-white  border-t border-[#3a35411f] py-15 px-30 gap-5 ">
+        <footer className="flex flex-col w-full  bg-white  border-t border-[#3a35411f] py-15 p-20 xl:px-30 gap-4 xl:gap-5 ">
             <div className="flex justify-between ">
                 <section className="flex flex-col h-full gap-4">
                     <img
@@ -8,7 +8,7 @@ function Footer() {
                         src="/logo/videobelajar.png"
                         alt=""
                     />
-                    <p className="font-bold text-base leading-[140%] tracking-[0.2%] text-[#222325]">
+                    <p className="font-bold text-base leading-[140%] tracking-[0.2%] text-text-dark-primary">
                         Gali Potensi Anda Melalui Pembelajaran Video di
                         hariesok.id
                     </p>
@@ -21,7 +21,7 @@ function Footer() {
                 <section className="flex  gap-12">
                     <div className="flex flex-col gap-[15px]">
                         <div className="flex justify-between items-center">
-                            <p className="font-bold text-base leading-[140%] tracking-[0.2%] text-[#222325]">
+                            <p className="font-bold text-base leading-[140%] tracking-[0.2%] text-text-dark-primary">
                                 Kategori
                             </p>
                         </div>
@@ -35,7 +35,7 @@ function Footer() {
                     </div>
                     <div className="flex flex-col gap-[15px]">
                         <div className="flex justify-between items-center">
-                            <p className="font-bold text-base leading-[140%] tracking-[0.2%] text-[#222325]">
+                            <p className="font-bold text-base leading-[140%] tracking-[0.2%] text-text-dark-primary">
                                 Perusahaan
                             </p>
                         </div>
@@ -49,7 +49,7 @@ function Footer() {
                     </div>
                     <div className="flex flex-col gap-[15px]">
                         <div className="flex flex-col  justify-between items-center">
-                            <p className="flex font-bold text-base leading-[140%] tracking-[0.2%] text-[#222325]">
+                            <p className="flex font-bold text-base leading-[140%] tracking-[0.2%] text-text-dark-primary">
                                 Komunitas
                             </p>
                         </div>

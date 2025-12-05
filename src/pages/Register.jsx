@@ -7,13 +7,13 @@ function Register() {
     return (
         <>
             <Navbar />
-            <div className="flex justify-center items-center min-h-screen h-full py-16 px-30 gap-8">
-                <div className="bg-amber-300 w-[590px] flex flex-col h-full p-9 gap-9 border border-[#f1f1f1] rounded-sm">
+            <div className="bg-[#FFFDF3] flex justify-center items-center min-h-screen h-full py-16 px-30 gap-8">
+                <div className="bg-white w-[320px] xl:w-[590px] flex flex-col h-full p-9 gap-9 border border-[#f1f1f1] rounded-sm">
                     <div className="text-center items-center w-full h-full gap-2.5 font-semibold">
-                        <h1 className="font-DMSans font-semibold text-[32px]">
+                        <h1 className="font-DMSans font-semibold text-[24px] xl:text-[32px]">
                             Pendaftaran Akun
                         </h1>
-                        <p className="font-DMSans font-normal text-base">
+                        <p className="font-DMSans font-normal text-sm xl:text-base">
                             Yuk, daftarkan akunmu sekarang juga!
                         </p>
                     </div>
@@ -121,9 +121,8 @@ function Register() {
                             <hr className="w-[40%] border border-[#f1f1f1]" />
                         </div>
 
-                        <button className="flex justify-center items-center w-[518px] h-[42px] border border-[#f1f1f1] text-[#333333ad] text-center outline-none rounded-2.5 py-2.5 px-25 pointer font-bold text-base gap-2">
+                        <button className="flex justify-center items-center w-[250px] xl:w-[518px] xl:h-[42px] border border-[#f1f1f1] text-[#333333ad] text-center outline-none rounded-2.5 py-2.5 xl:px-25 pointer font-bold text-base">
                             <img class="logo-google" src={Google} />
-                            Masuk dengan Google
                         </button>
                     </form>
                 </div>
