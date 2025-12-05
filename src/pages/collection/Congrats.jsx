@@ -9,7 +9,7 @@ import ModalReview from "../../components/modal/ModalReview";
 function Congrats() {
     return (
         <>
-            <NavbarProgress progressDropDown />
+            <NavbarProgress notCompleted />
             <main className="grid grid-cols-3">
                 <section className="flex flex-col col-span-2">
                     <img src={congratulation} alt="" />

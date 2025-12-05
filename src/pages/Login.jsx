@@ -4,11 +4,11 @@ import Google from "/logo/google.png";
 function Login() {
     return (
         <>
-            <div className="py-3 px-30 border border-[#f1f1f1]">
+            <div className="py-3 px-5 xl:px-52 border border-[#f1f1f1]">
                 <img src={Logo} />
             </div>
-            <div className="flex justify-center items-center min-h-screen h-full py-16 px-30 gap-8">
-                <div className="bg-yellow-400 w-[590px] flex flex-col h-full p-9 gap-9 border border-[#f1f1f1] rounded-sm">
+            <main className="bg-[#FFFDF3] flex justify-center items-center min-h-screen h-full py-16 px-30 gap-8">
+                <div className="bg-white w-[590px] flex flex-col h-full p-9 gap-9 border border-[#f1f1f1] rounded-sm">
                     <div className="text-center items-center w-full h-full gap-2.5 font-semibold">
                         <h1 className="font-DMSans font-semibold text-[32px]">
                             Masuk Ke Akun
@@ -78,7 +78,7 @@ function Login() {
                         </div>
                     </form>
                 </div>
-            </div>
+            </main>
         </>
     );
 }

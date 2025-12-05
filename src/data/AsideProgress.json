@@ -3,7 +3,7 @@
         "title": "Introduction to HR",
         "category": "Pre-Test",
         "description": "10 Pertanyaan",
-        "isDone": false
+        "isDone": true
     },
     {
         "title": "Introduction to HR",
@@ -15,17 +15,29 @@
         "title": "Introduction to HR",
         "category": "Video",
         "description": "12 Menit",
-        "isDone": false
+        "isDone": true
+    },
+    {
+        "title": "Introduction to HR",
+        "category": "Video",
+        "description": "12 Menit",
+        "isDone": true
     },
     {
         "title": "Introduction to HR",
         "category": "Rangkuman",
         "description": "12 Menit",
-        "isDone": false
+        "isDone": true
     },
     {
         "title": "Introduction to HR",
         "category": "Quiz",
+        "description": "10 Pertanyaan",
+        "isDone": true
+    },
+    {
+        "title": "Introduction to HR",
+        "category": "Ujian Akhir",
         "description": "10 Pertanyaan",
         "isDone": false
     }
