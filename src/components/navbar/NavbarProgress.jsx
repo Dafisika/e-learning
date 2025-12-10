@@ -100,7 +100,10 @@ function NavbarProgress() {
                     >
                         {" "}
                     </progress>
-                    <div className="flex items-center gap-2">
+                    <div
+                        onClick={() => setOpen(!open)}
+                        className="flex items-center gap-2"
+                    >
                         <p className="font-bold text-base text-[#3ECF4C] leading-[140%] tracking-[0.2px]">
                             {completedTask}/{totalTask}
                         </p>
@@ -118,6 +121,27 @@ function NavbarProgress() {
                         </svg>
                     </div>
                     <img className="" src={Avatar} alt="" />
+
+                    {open && (
+                        <div
+                            className="absolute top-20 right-10 shadow-[0px_12px_25px_-10px_rgba(61,61,61,0.15)]
+            "
+                        >
+                            <div className="bg-white w-100 h-[193px] flex flex-col rounded-4px p-6 gap-3 ">
+                                <p className="font-poppins! font-semibold text-lg text-text-dark-primary leading-[120%]">
+                                    25% Modul Telah Selesai
+                                </p>
+                                <hr className="border border-[#3A35411F]" />
+                                <p className="font-normal text-base text-[#333333AD] leading-[140%] tracking-[0.2px]">
+                                    Selesaikan Semua Modul Untuk Mendapatkan
+                                    Sertifikat
+                                </p>
+                                <button className="bg-[#BDBDBD] font-bold text-base text-[#3A354161] leading-[140%] tracking-[0.2px] rounded-[10px] py-2.5 px-[26px] ">
+                                    Ambil Sertifikat{" "}
+                                </button>
+                            </div>
+                        </div>
+                    )}
                 </div>
             )}
         </nav>

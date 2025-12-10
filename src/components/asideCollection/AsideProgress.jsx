@@ -1,8 +1,11 @@
+import { useState } from "react";
 import AsideData from "../../data/AsideProgress.json";
 import AsideProgressData from "./AsideProgressData";
 function AsideProgress() {
+    const [open, setOpen] = useState(false);
+
     return (
-        <aside className="flex flex-col col-span-1 border border-[#3A35411F]">
+        <aside className=" flex-col col-span-1  border border-[#3A35411F]">
             <section className="border border-[#3A35411F] pt-6 pb-5 ps-[30px] pe-[34px]">
                 <p className="font-poppins! font-semibold text-lg text-text-dark-primary leading-[120%]">
                     Daftar Modul
@@ -10,11 +13,17 @@ function AsideProgress() {
             </section>
             <section className="py-6 px-9">
                 <div className="flex flex-col gap-6">
-                    <div className="flex items-center justify-between">
+                    <div
+                        onClick={() => setOpen(!open)}
+                        className="flex items-center justify-between"
+                    >
                         <p className="font-poppins! font-semibold text-lg text-text-dark-primary leading-[120%]">
                             Introduction to HR
                         </p>
                         <svg
+                            className={`
+                            ${open ? "" : "-rotate-180"}
+                        transition-all duration-300`}
                             width="24"
                             height="24"
                             viewBox="0 0 24 24"
@@ -31,15 +40,16 @@ function AsideProgress() {
                             />
                         </svg>
                     </div>
-                    {AsideData.map((item, index) => (
-                        <AsideProgressData
-                            key={index}
-                            title={item.title}
-                            category={item.category}
-                            description={item.description}
-                            isDone={item.isDone}
-                        />
-                    ))}
+                    {open &&
+                        AsideData.map((item, index) => (
+                            <AsideProgressData
+                                key={index}
+                                title={item.title}
+                                category={item.category}
+                                description={item.description}
+                                isDone={item.isDone}
+                            />
+                        ))}
                     <div className="flex items-center justify-between">
                         <p className="font-poppins! font-semibold text-lg text-text-dark-primary leading-[120%]">
                             Introduction to HR
@@ -63,7 +73,7 @@ function AsideProgress() {
                     </div>
                 </div>
             </section>
-            <section className="bg-[#FFBD3A] flex border border-[#3A35411F] py-4 px-9 gap-2">
+            <section className="bg-[#FFBD3A] bottom-0 right-0 flex border border-[#3A35411F] py-4 px-9 gap-2">
                 <svg
                     width="20"
                     height="20"

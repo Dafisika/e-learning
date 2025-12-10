@@ -6,20 +6,10 @@ import Product from "../../components/Product";
 import BcaFull from "/bank/bca-full.png";
 import OrderSummary from "../../components/order/OrderSummary";
 import PaymentProcedure from "../../components/PaymentProcedure";
+import Card1 from "/cover/card-1.png";
+import HowToPayment from "../../data/HowToPayment.json";
 
 function Payment() {
-    const accordionItem = [
-        { name: "Buka Aplikasi BCA Mobile" },
-        { name: 'Pilih "m-BCA", kemudian pilih "m-Transfer"' },
-        { name: 'Pilih "BCA Virtual Account"' },
-        { name: 'Masukkan nomor Virtual Account, lalu pilih "OK"' },
-        {
-            name: 'Klik tombol "Send" yang berada di sudut kanan atas aplikasi untuk melakukan transfer',
-        },
-        { name: 'Klik "OK" untuk melanjutkan pembayaran' },
-        { name: "Masukkan PIN Anda untuk meng-otorisasi transaksi" },
-        { name: "Transaksi Anda telah selesai" },
-    ];
     return (
         <>
             <Navbar payment={true} />
@@ -81,16 +71,20 @@ function Payment() {
                         </div>
                     </section>
                     <section>
-                        <Product />
+                        <Product image={Card1} />
                     </section>
-                    <PaymentProcedure />
-                    <Accordion>
-                        <AccordionItem title="ATM BCA">
-                            {accordionItem.map((item, index) => (
-                                <li key={index}>{item.name}</li>
-                            ))}
-                        </AccordionItem>
-                    </Accordion>
+                    <section className="bg-white flex flex-col col-span-2 border border-[#3A35411F] rounded-[10px] p-6 gap-6">
+                        <p className="font-poppins font-semibold text-xl leading-[120%] text-text-dark-primary">
+                            Tata Cara Pembayaran
+                        </p>
+                        {HowToPayment.map((item, index) => (
+                            <PaymentProcedure
+                                key={index}
+                                title={item.title}
+                                item={item.item}
+                            />
+                        ))}
+                    </section>
                 </article>
             </main>
         </>

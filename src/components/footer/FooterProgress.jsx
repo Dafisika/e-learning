@@ -1,6 +1,6 @@
 function FooterProgress() {
     return (
-        <footer className="bg-[#3ECF4C]  flex justify-between py-[18px] px-9">
+        <footer className="bg-[#3ECF4C] sticky left-0 right-0 bottom-0 flex justify-between py-[18px] px-9">
             <div className="flex gap-4">
                 <svg
                     width="24"

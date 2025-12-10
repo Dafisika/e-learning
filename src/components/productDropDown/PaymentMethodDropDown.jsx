@@ -11,13 +11,16 @@ function PaymentMethodDropDown() {
                 Metode Pembayaran
             </p>
             <div
-                onClick={() => setTransferBank(true)}
+                onClick={() => setTransferBank(!transferBank)}
                 className="flex justify-between border border-[#3A35411F] rounded-[10px]  py-4 px-5"
             >
                 <p className="font-bold text-base leading-[140%] tracking-[0.2%] text-[#1D2433]">
                     Transfer Bank
                 </p>
                 <svg
+                    className={`
+                            ${transferBank ? "" : "-rotate-180"}
+                        transition-all duration-300`}
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"

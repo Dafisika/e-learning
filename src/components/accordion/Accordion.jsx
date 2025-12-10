@@ -10,9 +10,9 @@ function Accordion(props) {
                     <div className="flex flex-col border border-[#3A35411F] rounded-xl py-4 px-5 gap-4">
                         {children}
                     </div>
-                    {/* <div className="flex flex-col border border-[#3A35411F] rounded-xl py-4 px-5 gap-4">
+                    <div className="flex flex-col border border-[#3A35411F] rounded-xl py-4 px-5 gap-4">
                         <div className="flex justify-between">
-                            <p className="font-poppins font-semibold text-lg leading-[120%] text-[#222325]">
+                            <p className="font-poppins font-semibold text-lg leading-[120%] text-text-dark-primary">
                                 Mobiie Banking BCA
                             </p>
                             <div className="">
@@ -54,7 +54,7 @@ function Accordion(props) {
                     </div>
                     <div className="flex flex-col border border-[#3A35411F] rounded-xl py-4 px-5 gap-4">
                         <div className="flex justify-between">
-                            <p className="font-poppins font-semibold text-lg leading-[120%] text-[#222325]">
+                            <p className="font-poppins font-semibold text-lg leading-[120%] text-text-dark-primary">
                                 Internet Banking BCA
                             </p>
                             <div className="">
@@ -92,7 +92,7 @@ function Accordion(props) {
                             </li>
                             <li>Pembayaran telah selesai</li>
                         </ol>
-                    </div> */}
+                    </div>
                 </div>
             </section>
         </>

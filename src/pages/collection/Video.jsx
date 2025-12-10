@@ -8,7 +8,7 @@ function Video() {
     return (
         <>
             <NavbarProgress progress />
-            <main className="grid grid-cols-3">
+            <main className="grid grid-cols-3 ">
                 <section className="flex flex-col col-span-2">
                     <img src={Media} alt="" />
                     <section className="flex flex-col py-9 px-30 gap-6">

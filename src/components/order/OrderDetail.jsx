@@ -10,7 +10,7 @@ function OrderDetail(props) {
     } = props;
     return (
         <section className="border border-[#3A35411F] rounded-[10px]">
-            <div className="bg-[#E2FCD933] flex justify-between border-b border-[#3A35411F] py-4 px-5">
+            <div className="bg-[#E2FCD933] flex justify-between items-center border-b border-[#3A35411F] py-4 px-5">
                 <div className="flex gap-6">
                     <div className="flex gap-2">
                         <p className="font-medium text-lg leading-[140%] tracking-[0.2px] text-[#333333AD]">
@@ -44,7 +44,7 @@ function OrderDetail(props) {
                     } rounded-[10px] py-1 px-2.5`}
                 >
                     <p
-                        className={`font-normal text-base  leading-[140%] tracking-[0.2px`}
+                        className={`font-normal text-base  leading-[140%] tracking-[0.2px]`}
                     >
                         {status}
                     </p>
