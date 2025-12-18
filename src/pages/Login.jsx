@@ -1,7 +1,38 @@
 import Button from "./../components/button/Button";
 import Logo from "/logo/videobelajar.png";
 import Google from "/logo/google.png";
+import { useState } from "react";
 function Login() {
+    const [inputs, setInputs] = useState({
+        email: "",
+        sandi: "",
+    });
+
+    function handleChange(e) {
+        const name = e.target.name;
+        const value = e.target.value;
+
+        setInputs((values) => ({ ...values, [name]: value }));
+    }
+
+    function onLogin(e) {
+        e.preventDefault();
+        const account = JSON.parse(localStorage.getItem("user"));
+        const checkEmail = account.find((item) => item.email === inputs.email);
+
+        if (checkEmail) {
+            const checkSandi = checkEmail.sandi === inputs.sandi;
+
+            if (checkSandi) {
+                alert("Login Berhasil");
+            } else {
+                alert("Sandi Salah");
+            }
+        } else {
+            alert("Email Tidak Ditemukan");
+        }
+    }
+
     return (
         <>
             <div className="py-3 px-10 xl:px-30 border border-[#f1f1f1]">
@@ -17,7 +48,7 @@ function Login() {
                             Yuk, lanjutin belajarmu di videobelajar.
                         </p>
                     </div>
-                    <form className="flex flex-col gap-6">
+                    <form onSubmit={onLogin} className="flex flex-col gap-6">
                         <div className="flex flex-col gap-6">
                             <div className="flex flex-col w-full h-full font-normal text-base gap-4">
                                 <div className="mb-1">
@@ -26,6 +57,8 @@ function Login() {
                                         <span className="text-red-600">*</span>
                                     </label>
                                     <input
+                                        name="email"
+                                        onChange={handleChange}
                                         className="w-full h-full border border-[#f1f1f1] rounded-md py-3 px-2.5 text-base"
                                         id="email"
                                         type="email"
@@ -40,6 +73,8 @@ function Login() {
                                             </span>
                                         </label>
                                         <input
+                                            name="sandi"
+                                            onChange={handleChange}
                                             className="w-full h-full border border-[#f1f1f1] rounded-md py-3 px-2.5 text-base"
                                             id="kata-sandi"
                                             type="password"
@@ -57,6 +92,7 @@ function Login() {
                             </div>
 
                             <Button
+                                type="submit"
                                 text="Masuk"
                                 customStyle="bg-[#3ecf4c] text-white"
                             />

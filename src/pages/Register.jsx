@@ -2,8 +2,33 @@ import Button from "../components/button/Button";
 import Logo from "/logo/videobelajar.png";
 import Google from "/logo/google.png";
 import Navbar from "../components/navbar/Navbar";
+import { useState } from "react";
 
 function Register() {
+    const [inputs, setInputs] = useState({
+        nama: "",
+        email: "",
+        nomor: "",
+        sandi: "",
+        konfirmasiSandi: "",
+    });
+
+    function handleChange(e) {
+        const name = e.target.name;
+        const value = e.target.value;
+
+        setInputs((values) => ({ ...values, [name]: value }));
+    }
+
+    function onStoreData() {
+        const account = JSON.parse(localStorage.getItem("user"));
+        if (!account) {
+            localStorage.setItem("user", JSON.stringify([inputs]));
+        } else {
+            localStorage.setItem("user", JSON.stringify(account.push(inputs)));
+        }
+    }
+
     return (
         <>
             <Navbar />
@@ -18,7 +43,10 @@ function Register() {
                         </p>
                     </div>
 
-                    <form className=" flex flex-col gap-6">
+                    <form
+                        onSubmit={onStoreData}
+                        className=" flex flex-col gap-6"
+                    >
                         <div className="flex flex-col gap-6">
                             <div className="flex flex-col w-full h-full font-normal text-base gap-4">
                                 <div className="mb-1">
@@ -27,6 +55,9 @@ function Register() {
                                         <span className="text-red-600">*</span>
                                     </label>
                                     <input
+                                        name="nama"
+                                        onChange={handleChange}
+                                        value={inputs.nama || ""}
                                         className="w-full h-full border border-[#f1f1f1] rounded-md py-3 px-2.5 text-base"
                                         id="nama-lengkap"
                                         type="text"
@@ -38,6 +69,9 @@ function Register() {
                                         <span className="text-red-600">*</span>
                                     </label>
                                     <input
+                                        name="email"
+                                        onChange={handleChange}
+                                        value={inputs.email || ""}
                                         className="w-full h-full border border-[#f1f1f1] rounded-md py-3 px-2.5 text-base"
                                         id="email"
                                         type="email"
@@ -55,6 +89,9 @@ function Register() {
                                             type="tel"
                                         />
                                         <input
+                                            name="nomor"
+                                            onChange={handleChange}
+                                            value={inputs.nomor || ""}
                                             className="w-full h-full border border-[#f1f1f1] rounded-md py-3 px-2.5 text-base"
                                             id="no"
                                             type="tel"
@@ -67,6 +104,9 @@ function Register() {
                                         <span className="text-red-600">*</span>
                                     </label>
                                     <input
+                                        name="sandi"
+                                        onChange={handleChange}
+                                        value={inputs.sandi || ""}
                                         className="w-full h-full border border-[#f1f1f1] rounded-md py-3 px-2.5 text-base"
                                         id="kata-sandi"
                                         type="password"
@@ -89,6 +129,9 @@ function Register() {
                                             </span>
                                         </label>
                                         <input
+                                            name="konfirmasiSandi"
+                                            onChange={handleChange}
+                                            value={inputs.konfirmasiSandi || ""}
                                             className="w-full h-full border border-[#f1f1f1] rounded-md py-3 px-2.5 text-base"
                                             id="konfirmasi-sandi"
                                             type="password"
@@ -106,6 +149,7 @@ function Register() {
                             </div>
 
                             <Button
+                                type="submit"
                                 text="Register"
                                 customStyle="bg-[#3ecf4c] text-white"
                             />
