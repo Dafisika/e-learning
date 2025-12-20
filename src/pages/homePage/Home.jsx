@@ -12,8 +12,44 @@ import IconTwitter from "/icon/twitter.png";
 import Card1 from "/cover/card-1.png";
 import Avatar1 from "/avatar/Avatar-1.png";
 import Article from "../../data/Article.json";
+import { useEffect, useState } from "react";
 
 function Home() {
+    const [article, setArticle] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+
+    const fetchData = async () => {
+        try {
+            const response = await fetch(
+                "https://694594eeed253f51719bce71.mockapi.io/Article"
+            );
+
+            if (!response.ok) {
+                throw new Error(`HTTP Error! Status: $(response.status)`);
+            }
+            const data = await response.json();
+
+            console.log("Fetch Modern (console): Data Berhasil Di Ambil", data);
+            setArticle(data);
+        } catch (err) {
+            console.error(
+                "Fetch Modern (console): Tejadi Kesalahan",
+                err.message
+            );
+            setError(err.message);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    useEffect(() => {
+        fetchData();
+    }, []);
+    console.log(article);
+    console.log(error);
+    console.log(loading);
+
     return (
         <>
             <Navbar account={true} />
@@ -58,7 +94,7 @@ function Home() {
                         <div className="feature">Bisnis</div>
                     </section>
                     <section className="grid grid-cols-1 xl:grid-cols-3 gap-6">
-                        {Article.map((item, index) => (
+                        {article.map((item, index) => (
                             <Card
                                 key={index}
                                 image={item.image}
