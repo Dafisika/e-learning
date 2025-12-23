@@ -1,5 +1,4 @@
-import Questions from "../../data/Question.json";
-
+import Class from "../../data/Class.json";
 function Answer(props) {
     const { answer, onChange, value } = props;
     return (

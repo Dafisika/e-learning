@@ -21,9 +21,10 @@ import Congrats from "./pages/collection/Congrats";
 import TryAgain from "./pages/collection/TryAgain";
 import Summary from "./pages/collection/Summary";
 import Certificate from "./pages/collection/Certificate";
+import ClassDetail from "./components/detailOrder/ClassDetail";
 
 createRoot(document.getElementById("root")).render(
     <StrictMode>
-        <Home />
+        <Video />
     </StrictMode>
 );

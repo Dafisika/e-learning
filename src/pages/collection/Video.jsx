@@ -4,10 +4,46 @@ import Avatar1 from "/avatar/Avatar-1.png";
 import FooterProgress from "../../components/footer/FooterProgress";
 import AsideProgress from "../../components/asideCollection/AsideProgress";
 
+import { useEffect, useState } from "react";
+
 function Video() {
+    const [data, setData] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+
+    const fetchData = async () => {
+        try {
+            const response = await fetch("http://localhost:3000/class");
+            console.log(response);
+            if (!response.ok) {
+                throw new Error(`HTTP Error! Status: $(response.status)`);
+            }
+            const data = await response.json();
+
+            console.log("Fetch Modern (console): Data Berhasil Di Ambil", data);
+            setData(data.find((item) => item.id === "C-001"));
+        } catch (err) {
+            console.error(
+                "Fetch Modern (console): Tejadi Kesalahan",
+                err.message
+            );
+            setError(err.message);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    useEffect(() => {
+        fetchData();
+    }, []);
+
+    console.log(data);
+    console.log(error);
+    console.log(loading);
+
     return (
         <>
-            <NavbarProgress progress />
+            <NavbarProgress data={data && data?.detail_class} />
             <main className="grid grid-cols-3 ">
                 <section className="flex flex-col col-span-2">
                     <img src={Media} alt="" />
@@ -183,7 +219,7 @@ function Video() {
                         </div>
                     </section>
                 </section>
-                <AsideProgress />
+                <AsideProgress data={data && data?.detail_class} />
             </main>
             <FooterProgress />
         </>

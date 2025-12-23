@@ -1,7 +1,10 @@
 import { useState } from "react";
-import AsideData from "../../data/AsideProgress.json";
 import AsideProgressData from "./AsideProgressData";
-function AsideProgress() {
+import Class from "../../data/Class.json";
+
+function AsideProgress(props) {
+    const { data } = props;
+
     const [open, setOpen] = useState(false);
 
     return (
@@ -41,7 +44,7 @@ function AsideProgress() {
                         </svg>
                     </div>
                     {open &&
-                        AsideData.map((item, index) => (
+                        data.map((item, index) => (
                             <AsideProgressData
                                 key={index}
                                 title={item.title}

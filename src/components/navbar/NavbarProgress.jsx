@@ -1,13 +1,14 @@
 import Avatar from "/avatar/Avatar.png";
-import AsideProgress from "../../data/AsideProgress.json";
 import { useState } from "react";
 
-function NavbarProgress() {
-    const totalTask = AsideProgress.length;
+function NavbarProgress(props) {
+    const { data } = props;
+
+    const totalTask = data?.length;
     const [open, setOpen] = useState(false);
 
-    const completedTask = AsideProgress.reduce((accumulator, currentValue) => {
-        const number = currentValue.isDone === false ? 0 : 1;
+    const completedTask = data?.reduce((accumulator, currentValue) => {
+        const number = Number(currentValue.isDone);
         return accumulator + number;
     }, 0);
 

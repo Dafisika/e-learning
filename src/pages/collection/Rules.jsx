@@ -3,12 +3,11 @@ import Button from "../../components/button/Button";
 import FooterProgress from "../../components/footer/FooterProgress";
 import NavbarProgress from "../../components/navbar/NavbarProgress";
 import Rule from "/etc/rules.png";
-import AsideData from "../../data/AsideProgress.json";
 import AsideProgressData from "../../components/asideCollection/AsideProgressData";
-import Question from "../../data/Question.json";
+import Class from "../../data/Class.json";
 
 function Rules() {
-    const question = Question;
+    const question = Class;
     function onStoreData() {
         const quiz = localStorage.getItem("quiz");
         if (!quiz) {

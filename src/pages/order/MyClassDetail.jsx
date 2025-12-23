@@ -5,9 +5,42 @@ import Avatar1 from "/avatar/Avatar-1.png";
 import Pagination from "../../components/Pagination";
 import Button from "../../components/button/Button";
 import ClassDetail from "../../components/detailOrder/ClassDetail";
-import Class from "../../data/Class.json";
+import { useEffect, useState } from "react";
 
 function MyClassDetail() {
+    const [data, setData] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+
+    const fetchData = async () => {
+        try {
+            const response = await fetch("http://localhost:3000/class");
+
+            if (!response.ok) {
+                throw new Error(`HTTP Error! Status: $(response.status)`);
+            }
+            const data = await response.json();
+
+            console.log("Fetch Modern (console): Data Berhasil Di Ambil", data);
+            setData(data);
+        } catch (err) {
+            console.error(
+                "Fetch Modern (console): Tejadi Kesalahan",
+                err.message
+            );
+            setError(err.message);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    useEffect(() => {
+        fetchData();
+    }, []);
+    console.log(data);
+    console.log(error);
+    console.log(loading);
+
     return (
         <>
             <Navbar account />
@@ -134,7 +167,7 @@ function MyClassDetail() {
                             </div>
                         </div>
                         <section className="flex flex-col col-span-5 gap-6">
-                            {Class.map((item, index) => (
+                            {data.map((item, index) => (
                                 <ClassDetail
                                     key={index}
                                     modul={item.modul}
