@@ -5,6 +5,7 @@ import Loading from "../Loading";
 
 function ModalReview(props) {
     const { onClose } = props;
+    const [star, setStar] = useState(0);
 
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(false);
@@ -35,6 +36,11 @@ function ModalReview(props) {
         return <Loading />;
     }
 
+    const onClickStar = (value) => {
+        setStar(value);
+    };
+
+    console.log(star);
     return (
         <section className="bg-[rgba(0,0,0,0.5)] flex justify-center items-center overflow-hidden absolute top-0 left-0 w-full h-full">
             <div className="bg-white flex flex-col rounded-[10px] p-9 gap-[18px]">
@@ -47,123 +53,40 @@ function ModalReview(props) {
                     </p>
                 </div>
                 <div className="flex justify-center gap-1">
-                    <button>
-                        <svg
-                            viewBox="0 0 64 64"
-                            xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink"
-                            aria-hidden="true"
-                            role="img"
-                            className="w-[30px] h-[30px]"
-                            preserveAspectRatio="xMidYMid meet"
-                            fill="#000000"
+                    {Array.from({ length: 5 }).map((_, index) => (
+                        <button
+                            key={index}
+                            onClick={() => onClickStar(index + 1)}
                         >
-                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                            <g
-                                id="SVGRepo_tracerCarrier"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                            ></g>
-                            <g id="SVGRepo_iconCarrier">
-                                <path
-                                    d="M62 25.2H39.1L32 3l-7.1 22.2H2l18.5 13.7l-7 22.1L32 47.3L50.5 61l-7.1-22.2L62 25.2z"
-                                    fill="#ffce31"
-                                ></path>
-                            </g>
-                        </svg>
-                    </button>
-                    <svg
-                        viewBox="0 0 64 64"
-                        xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink"
-                        aria-hidden="true"
-                        role="img"
-                        className="w-[30px] h-[30px]"
-                        preserveAspectRatio="xMidYMid meet"
-                        fill="#000000"
-                    >
-                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                        <g
-                            id="SVGRepo_tracerCarrier"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        ></g>
-                        <g id="SVGRepo_iconCarrier">
-                            <path
-                                d="M62 25.2H39.1L32 3l-7.1 22.2H2l18.5 13.7l-7 22.1L32 47.3L50.5 61l-7.1-22.2L62 25.2z"
-                                fill="#ffce31"
-                            ></path>
-                        </g>
-                    </svg>
-                    <svg
-                        viewBox="0 0 64 64"
-                        xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink"
-                        aria-hidden="true"
-                        role="img"
-                        className="w-[30px] h-[30px]"
-                        preserveAspectRatio="xMidYMid meet"
-                        fill="#000000"
-                    >
-                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                        <g
-                            id="SVGRepo_tracerCarrier"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        ></g>
-                        <g id="SVGRepo_iconCarrier">
-                            <path
-                                d="M62 25.2H39.1L32 3l-7.1 22.2H2l18.5 13.7l-7 22.1L32 47.3L50.5 61l-7.1-22.2L62 25.2z"
-                                fill="#ffce31"
-                            ></path>
-                        </g>
-                    </svg>
-                    <svg
-                        viewBox="0 0 64 64"
-                        xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink"
-                        aria-hidden="true"
-                        role="img"
-                        className="w-[30px] h-[30px]"
-                        preserveAspectRatio="xMidYMid meet"
-                        fill="#c4c4c4"
-                    >
-                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                        <g
-                            id="SVGRepo_tracerCarrier"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        ></g>
-                        <g id="SVGRepo_iconCarrier">
-                            <path
-                                d="M62 25.2H39.1L32 3l-7.1 22.2H2l18.5 13.7l-7 22.1L32 47.3L50.5 61l-7.1-22.2L62 25.2z"
-                                fill="#c4c4c4"
-                            ></path>
-                        </g>
-                    </svg>
-                    <svg
-                        viewBox="0 0 64 64"
-                        xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink"
-                        aria-hidden="true"
-                        role="img"
-                        className="w-[30px] h-[30px]"
-                        preserveAspectRatio="xMidYMid meet"
-                        fill="#c4c4c4"
-                    >
-                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                        <g
-                            id="SVGRepo_tracerCarrier"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        ></g>
-                        <g id="SVGRepo_iconCarrier">
-                            <path
-                                d="M62 25.2H39.1L32 3l-7.1 22.2H2l18.5 13.7l-7 22.1L32 47.3L50.5 61l-7.1-22.2L62 25.2z"
-                                fill="#c4c4c4"
-                            ></path>
-                        </g>
-                    </svg>
+                            <svg
+                                viewBox="0 0 64 64"
+                                xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                aria-hidden="true"
+                                role="img"
+                                className={`w-[30px] h-[30px]`}
+                                fill="none"
+                                preserveAspectRatio="xMidYMid meet"
+                            >
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g
+                                    id="SVGRepo_tracerCarrier"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                ></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <path
+                                        d="M62 25.2H39.1L32 3l-7.1 22.2H2l18.5 13.7l-7 22.1L32 47.3L50.5 61l-7.1-22.2L62 25.2z"
+                                        fill={
+                                            index + 1 <= star
+                                                ? "#FFFF00"
+                                                : "#c4c4c4"
+                                        }
+                                    ></path>
+                                </g>
+                            </svg>
+                        </button>
+                    ))}
                 </div>
                 <textarea
                     rows={3}
@@ -189,5 +112,99 @@ function ModalReview(props) {
             </div>
         </section>
     );
+}
+{
+    /* <button onClick={show} className="">
+                        <svg
+                            width="30"
+                            height="30"
+                            viewBox="0 0 30 30"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M15 21.5875L22.725 26.25L20.675 17.4625L27.5 11.55L18.5125 10.7875L15 2.5L11.4875 10.7875L2.5 11.55L9.325 17.4625L7.275 26.25L15 21.5875Z"
+                                fill="#FFB400"
+                            />
+                        </svg>
+                    </button> */
+}
+
+{
+    /* <button>
+                        <svg
+                            viewBox="0 0 64 64"
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            aria-hidden="true"
+                            role="img"
+                            className="w-[30px] h-[30px]"
+                            preserveAspectRatio="xMidYMid meet"
+                            fill="#c4c4c4"
+                        >
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g
+                                id="SVGRepo_tracerCarrier"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            ></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path
+                                    d="M62 25.2H39.1L32 3l-7.1 22.2H2l18.5 13.7l-7 22.1L32 47.3L50.5 61l-7.1-22.2L62 25.2z"
+                                    fill="#c4c4c4"
+                                ></path>
+                            </g>
+                        </svg>
+                    </button>
+                    <button>
+                        <svg
+                            viewBox="0 0 64 64"
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            aria-hidden="true"
+                            role="img"
+                            className="w-[30px] h-[30px]"
+                            preserveAspectRatio="xMidYMid meet"
+                            fill="#c4c4c4"
+                        >
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g
+                                id="SVGRepo_tracerCarrier"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            ></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path
+                                    d="M62 25.2H39.1L32 3l-7.1 22.2H2l18.5 13.7l-7 22.1L32 47.3L50.5 61l-7.1-22.2L62 25.2z"
+                                    fill="#c4c4c4"
+                                ></path>
+                            </g>
+                        </svg>
+                    </button>
+                    <button>
+                        <svg
+                            viewBox="0 0 64 64"
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            aria-hidden="true"
+                            role="img"
+                            className="w-[30px] h-[30px]"
+                            preserveAspectRatio="xMidYMid meet"
+                            fill="#c4c4c4"
+                        >
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g
+                                id="SVGRepo_tracerCarrier"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            ></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path
+                                    d="M62 25.2H39.1L32 3l-7.1 22.2H2l18.5 13.7l-7 22.1L32 47.3L50.5 61l-7.1-22.2L62 25.2z"
+                                    fill="#c4c4c4"
+                                ></path>
+                            </g>
+                        </svg>
+                    </button> */
 }
 export default ModalReview;
